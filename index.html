@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Bretchkin – Portfolio</title>
   <style>
+    :root {
+      --main-bg: #102542;
+      --accent: #F87060;
+      --card-bg: #1b3550;
+    }
+
     body {
+      font-family: 'Inter', Arial, sans-serif;
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      background: var(--main-bg);
+      color: var(--accent);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,41 +39,54 @@
     }
 
     .card {
-      background: white;
+      background: var(--card-bg);
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: var(--accent);
+      border: 2px solid var(--accent);
     }
 
     .card:hover {
       transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     }
 
     .card h2 {
-      margin-top: 0;
+      margin-top: 1rem;
       font-size: 1.2rem;
     }
 
     .card p {
       font-size: 0.95rem;
-      color: #555;
+      color: var(--accent);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
     .button {
       margin-top: 2rem;
-      background: #333;
-      color: white;
+      background: transparent;
+      color: var(--accent);
       padding: 0.75rem 1.5rem;
-      border: none;
+      border: 2px solid var(--accent);
       border-radius: 8px;
       font-size: 1rem;
-      cursor: default;
-      opacity: 0.8;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
     }
 
     .button:hover {
-      opacity: 1;
+      background: var(--accent);
+      color: var(--main-bg);
     }
   </style>
 </head>
@@ -72,14 +94,13 @@
   <h1>Daniel Bretchkin</h1>
 
   <div class="grid">
-<a href="https://nobudgetgames.itch.io/velocity" class="card" target="_blank">
-  <img src="images/velocity.png" alt="Velocty (Aug 05, 2023)" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-  <h2>Velocity</h2>
-  <p>Velocity is a fast-paced parkour set in the sky, where you have to run, jump, wallrun, and grapple your way to the end! (Aug 05, 2023) </p>
-</a>
-
+    <a href="https://yourprojectlink.com" class="card" target="_blank">
+      <img src="images/velocity.png" alt="Screenshot of Velocity Project">
+      <h2>Velocity</h2>
+      <p>First-person parkour prototype made for a game jam. Focused on momentum and wall jumps.</p>
+    </a>
   </div>
 
-  <button class="button">More coming soon...</button>
+  <a href="https://youritchusername.itch.io" class="button" target="_blank">More coming soon...</a>
 </body>
 </html>
