@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Bretchkin – Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .button {
+      margin-top: 2rem;
+      background: #333;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: default;
+      opacity: 0.8;
+    }
+
+    .button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daniel Bretchkin</h1>
+
+  <div class="grid">
+<a href="https://nobudgetgames.itch.io/velocity" class="card" target="_blank">
+  <img src="images/velocity.png" alt="Velocty (Aug 05, 2023)" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+  <h2>Velocity</h2>
+  <p>Velocity is a fast-paced parkour set in the sky, where you have to run, jump, wallrun, and grapple your way to the end! (Aug 05, 2023) </p>
+</a>
+
+  </div>
+
+  <button class="button">More coming soon...</button>
+</body>
+</html>
